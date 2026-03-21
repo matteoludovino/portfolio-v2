@@ -10,7 +10,7 @@ export default function Hero() {
         </div>
 
         <div className="person-description">
-          <p>Tenho 20 anos e sou desenvolvedor FullStack, saiba mais sobre mim:</p>
+          <p>Tenho 20 anos e sou desenvolvedor Full Stack, saiba mais sobre mim:</p>
         </div>
 
         <div className="button-container">

@@ -100,7 +100,7 @@ export default function GitHubDashboard() {
     setCommit((prev) => ({ ...prev, loading: true, error: false }));
     try {
       const res = await fetch(
-        'https://api.github.com/repos/matteoludovino/Portfolio/commits?per_page=1'
+        'https://api.github.com/repos/matteoludovino/portfolio-v2/commits?per_page=1'
       );
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const [data] = await res.json();
@@ -109,7 +109,7 @@ export default function GitHubDashboard() {
         loading: false,
         error:   false,
         message: data.commit.message,
-        repo:    'matteoludovino/Portfolio',
+        repo:    'matteoludovino/portfolio-v2',
         author:  data.commit.author.name,
         date:    data.commit.author.date,
         url:     data.html_url,

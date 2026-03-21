@@ -15,13 +15,12 @@ export default function About() {
           websites, inicialmente utilizando apenas HTML e me apaixonei por isso.
         </p>
         <p>
-          Em 2024, comecei a cursar Análise e Desenvolvimento
-          de Sistemas e atualmente estou focando em JavaScript para a área Web.
-        </p>
-        <p>
-          Optei pelo JavaScript em razão de sua ampla comunidade, elevado potencial de desenvolvimento
-          e a possibilidade de reaproveitamento de conhecimentos nas esferas web, mobile e backend,
-          utilizando frameworks como React e Node.
+          Em 2024, comecei a cursar Análise e Desenvolvimento de Sistemas 
+          e hoje atuo como desenvolvedor Full Stack, utilizando JavaScript, 
+          TypeScript, Node.js e React no desenvolvimento de aplicações web, 
+          além de trabalhar com serviços da AWS como EC2, S3, Lambda e CloudWatch, 
+          aplicando conceitos de arquitetura serverless, integrações e boas práticas 
+          de desenvolvimento.
         </p>
         <p>
           Estou disponível para freelance e busco oportunidade de trabalhar na área.

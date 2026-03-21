@@ -19,14 +19,12 @@ export default function Projects() {
         ))}
       </div>
 
-      {projects.length > HOME_LIMIT && (
-        <div className="pc-see-more">
-          <Link to="/projetos" className="glow-on-hover pc-see-more__btn">
-            Ver mais projetos
-            <i className="fas fa-arrow-right pc-see-more__icon"></i>
-          </Link>
-        </div>
-      )}
+      <div className="pc-see-more">
+        <Link to="/projetos" className="glow-on-hover pc-see-more__btn">
+          Ver mais projetos
+          <i className="fas fa-arrow-right pc-see-more__icon"></i>
+        </Link>
+      </div>
     </section>
   );
 }

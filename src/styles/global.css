@@ -60,14 +60,6 @@ body {
     color: #000;
 }
 
-.light-theme .nav-item a:hover,
-.light-theme .nav-item a.active {
-    background-image: radial-gradient(circle, #842ebd, #910fce, #650c8b);
-    background-clip: text;
-    color: transparent;
-    border-bottom: 3px solid #630c8b;
-}
-
 .light-theme .glow-on-hover,
 .light-theme .glow-on-hover:after {
     background: #e5e4e5;
@@ -169,7 +161,6 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 10% 0;
 }
 
 .nav-menu {
@@ -390,85 +381,6 @@ header {
     margin-bottom: 8rem;
 }
 
-.wrapper-projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20rem;
-    margin-left: 205px;
-    margin-right: 205px;
-}
-
-.project-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-.project-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.project-image img:hover {
-    transform: scale(1.01);
-    filter: drop-shadow(0 4px 8px #8a2be280);
-}
-
-.project-card span {
-    font-size: 1.4rem;
-    color: #fff;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 0.8rem;
-    color: #636363;
-    margin-bottom: 20px;
-}
-
-.project-card {
-    flex: 0 0 calc(50% - 40px);
-    margin: 0 20px;
-    box-sizing: border-box;
-}
-
-.techs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.techs ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.techs ul li svg {
-    width: 21px;
-    height: 21px;
-    transition: transform 0.3s ease;
-}
-
-.techs ul li svg:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
-.project-card .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
 
 #skills {
     background: #000;
@@ -510,8 +422,7 @@ header {
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 5px 8px #9f19d4cc;
+    border-color: #7600adcc;
 }
 
 .skill-icon {
@@ -622,14 +533,6 @@ footer .contact svg {
 
 .contact-buttons svg {
     height: 22px;
-}
-
-.contact-buttons a:hover {
-    transform: scale(1.015);
-}
-
-.contact-button:hover {
-    box-shadow: 0px 3.5px 5px #7406a0cc;
 }
 
 footer {
@@ -839,22 +742,7 @@ footer .contact a i {
         width: 80%;
     }
 
-    .wrapper-projects {
-        grid-template-columns: 1fr;
-        gap: 10rem;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
 
-    .project-card {
-        margin-bottom: 50px;
-    }
-
-    .carrossel-btn {
-        width: 40px;
-        height: 40px;
-        padding: 10px;
-    }
 
     .skills-container {
         flex-direction: column;
@@ -930,8 +818,7 @@ footer .contact a i {
 }
 
 .gh-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 5px 8px #9f19d4cc;
+  border-color: #7600adcc;
 }
 
 .gh-card__header {
@@ -1117,8 +1004,8 @@ footer .contact a i {
 .pc-grid--home {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.4rem;
-  max-width: 1100px;
+  gap: 1.5rem;
+  max-width: 1200px;
   margin: 0 auto 3rem;
   padding: 0 40px;
 }
@@ -1127,7 +1014,7 @@ footer .contact a i {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px 80px;
 }
@@ -1139,12 +1026,11 @@ footer .contact a i {
   border-radius: 20px;
   overflow: hidden;
   background: transparent;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.2s ease;
 }
 
 .pc-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 5px 12px #9f19d4cc;
+  border-color: #7600adcc;
 }
 
 .pc-card__image-link {
@@ -1155,7 +1041,7 @@ footer .contact a i {
 .pc-card__image-wrap {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 1;
   background: #0a0a0a;
 }
 
@@ -1164,17 +1050,12 @@ footer .contact a i {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
-}
-
-.pc-card:hover .pc-card__image {
-  transform: scale(1.04);
 }
 
 .pc-card__image-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(118, 0, 173, 0.35);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1257,7 +1138,6 @@ footer .contact a i {
   font-weight: 500;
   color: #e5e4e5;
   background: transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .pc-stack-badge svg {
@@ -1269,6 +1149,12 @@ footer .contact a i {
 .light-theme .pc-stack-badge {
   color: #222;
   border-color: #aaa;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.light-theme .pc-stack-badge:hover {
+  border-color: #7600adcc;
+  color: #bc4cd8;
 }
 
 .pc-card__actions {
@@ -1378,4 +1264,101 @@ footer .contact a i {
   .pc-see-more {
     margin-bottom: 3rem;
   }
+}
+
+.pc-card__image-btn {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: zoom-in;
+  text-align: left;
+}
+
+.img-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: modal-fade-in 0.22s ease forwards;
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.img-modal-content {
+  position: relative;
+  max-width: min(90vw, 1100px);
+  max-height: 90vh;
+  animation: modal-scale-in 0.22s ease forwards;
+}
+
+@keyframes modal-scale-in {
+  from { transform: scale(0.92); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.img-modal-image {
+  display: block;
+  width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid #636363;
+}
+
+.img-modal-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #111;
+  border: 1px solid #636363;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  z-index: 1;
+}
+
+.img-modal-close:hover {
+  border-color: #7600adcc;
+  color: #bc4cd8;
+}
+
+.pc-card__image-cta {
+  cursor: zoom-in;
+}
+
+.pc-card,
+.skill-card,
+.gh-card {
+  transition: border-color 0.2s ease;
+}
+
+.contact-button {
+  border: 1px solid #333;
+  transition: border-color 0.2s ease;
+}
+
+.light-theme .contact-button {
+  border-color: #ccc;
+}
+
+.contact-button:hover {
+  border-color: #7600adcc !important;
 }
