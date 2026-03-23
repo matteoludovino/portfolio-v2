@@ -13,7 +13,7 @@ export const TECH = {
   nodejs:     { label: 'Node.js',    Icon: NodeIcon         }, 
   next:       { label: 'Next.js',    Icon: NextIcon         },
   react:      { label: 'React',      Icon: ReactIcon        },
-  express:   { label: 'Express.js',    Icon: ExpressIcon       },
+  express:    { label: 'Express.js',  Icon: ExpressIcon     },
   https:      { label: 'HTTPS',      Icon: HTTPSIcon        },
   vercel:     { label: 'Vercel',     Icon: VercelIcon       },
 };
@@ -21,6 +21,16 @@ export const TECH = {
 export const projects = [
   {
     id: 1,
+    name: 'Seu Burguer',
+    description: 'Landing page para a hamburgueria Seu Burguer. O site apresenta o cardápio completo com filtro por categoria, carrinho de compras com controle de quantidade e finalização de pedido direto pelo WhatsApp. Possui indicador de horário de funcionamento em tempo real, animações suaves e design escuro moderno com foco em mobile.',
+    image: '/img/seu-burguer.png',
+    imageAlt: 'Seu Burguer',
+    liveUrl: 'https://seu-burguer.vercel.app/',
+    repoUrl: 'https://github.com/matteoludovino/seu-burguer',
+    stacks: ['next', 'tailwind', 'vercel'],
+  },
+  {
+    id: 2,
     name: 'VitalCare',
     description: 'Landing page para a clínica médica VitalCare, com seções de apresentação, grade de 17 especialidades, depoimentos de pacientes e banner de conversão com CTA duplo. Desenvolvida com Next.js 14, TypeScript e Tailwind CSS, com layout responsivo, animações de scroll e navegação com detecção de seção ativa.',
     image: '/img/vitalcare.png',
@@ -30,7 +40,7 @@ export const projects = [
     stacks: ['next', 'tailwind', 'vercel'],
   },
   {
-    id: 2,
+    id: 3,
     name: 'API de Gerenciamento de Pedidos',
     description: 'API REST para sistema de PDV (POS) de restaurante, desenvolvida com Node.js, Express, Sequelize e MySQL. Oferece gerenciamento de clientes, produtos e pedidos com arquitetura MVC escalável, integridade transacional e código limpo e modular.',
     image: '/img/api-pedidos.png',
@@ -40,23 +50,13 @@ export const projects = [
     stacks: ['nodejs', 'express', 'https', 'mysql'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Saúde+',
     description: 'Plataforma responsiva de descontos para clínica ambulatorial com catálogo de serviços.',
     image: '/img/saudemais.png',
     imageAlt: 'Saúde+',
     liveUrl: 'https://saude-mais.vercel.app/',
     repoUrl: 'https://github.com/matteoludovino/SaudeMais',
-    stacks: ['html', 'css', 'js'],
-  },
-  {
-    id: 4,
-    name: 'Seu Burguer',
-    description: 'Cardápio online responsivo para hamburgueria, com navegação intuitiva e design atraente.',
-    image: '/img/seuburguer.png',
-    imageAlt: 'Seu Burguer',
-    liveUrl: 'https://seu-burguer.vercel.app/',
-    repoUrl: 'https://github.com/matteoludovino/Seu-Burguer',
     stacks: ['html', 'css', 'js'],
   },
 ];
