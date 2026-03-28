@@ -1,4 +1,4 @@
-import { JSIcon, HTMLIcon, CSSIcon, PHPIcon, NodeIcon, ExpressIcon, HTTPSIcon, ReactIcon, NextIcon, VercelIcon, MySQLIcon, PostgreSQLIcon, MongoDBIcon, TailwindIcon } from './svgIcons';
+import { JSIcon, HTMLIcon, CSSIcon, PHPIcon, NodeIcon, ExpressIcon, HTTPSIcon, ReactIcon, NextIcon, VercelIcon, MySQLIcon, PostgreSQLIcon, MongoDBIcon, TailwindIcon, TSIcon } from './svgIcons';
 
 export const TECH = {
   html:       { label: 'HTML',       Icon: HTMLIcon         },
@@ -13,14 +13,25 @@ export const TECH = {
   nodejs:     { label: 'Node.js',    Icon: NodeIcon         }, 
   next:       { label: 'Next.js',    Icon: NextIcon         },
   react:      { label: 'React',      Icon: ReactIcon        },
-  express:    { label: 'Express.js',  Icon: ExpressIcon     },
+  express:    { label: 'Express.js', Icon: ExpressIcon      },
   https:      { label: 'HTTPS',      Icon: HTTPSIcon        },
   vercel:     { label: 'Vercel',     Icon: VercelIcon       },
+  typescript: { label: 'TypeScript', Icon: TSIcon           },
 };
 
 export const projects = [
   {
     id: 1,
+    name: 'Saúde+',
+    description: 'Landing page para o Saúde+, programa de benefícios que oferece descontos em consultas, exames e medicamentos. Possui animações de scroll, header dinâmico, FAQ com filtro por categorias e formulário de captação de leads, totalmente responsiva para mobile, tablet e desktop.',
+    image: '/img/saudemais.png',
+    imageAlt: 'Saúde+',
+    liveUrl: 'https://saude-mais.vercel.app/',
+    repoUrl: 'https://github.com/matteoludovino/SaudeMais',
+    stacks: ['next', 'tailwind', 'typescript', 'vercel'],
+  },
+  {
+    id: 2,
     name: 'API de Gerenciamento de Reservas',
     description: 'API RESTful para reservas de hotéis e restaurantes desenvolvida com Node.js, Express e MongoDB. Suporta autenticação, estabelecimentos, quartos/mesas e reservas com verificação de disponibilidade, prevenção de conflitos e arquitetura modular escalável.',
     image: '/img/api-reservas.png',
@@ -30,27 +41,27 @@ export const projects = [
     stacks: ['nodejs','express', 'https', 'mongodb'],
   },
   {
-    id: 2,
+    id: 3,
     name: 'Seu Burguer',
     description: 'Landing page para a hamburgueria Seu Burguer. O site apresenta o cardápio completo com filtro por categoria, carrinho de compras com controle de quantidade e finalização de pedido direto pelo WhatsApp. Possui indicador de horário de funcionamento em tempo real, animações suaves e design escuro moderno com foco em mobile.',
     image: '/img/seu-burguer.png',
     imageAlt: 'Seu Burguer',
     liveUrl: 'https://seu-burguer.vercel.app/',
     repoUrl: 'https://github.com/matteoludovino/seu-burguer',
-    stacks: ['next', 'tailwind', 'vercel'],
+    stacks: ['next', 'tailwind', 'typescript', 'vercel'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'VitalCare',
     description: 'Landing page para a clínica médica VitalCare, com seções de apresentação, grade de 17 especialidades, depoimentos de pacientes e banner de conversão com CTA duplo. Desenvolvida com Next.js 14, TypeScript e Tailwind CSS, com layout responsivo, animações de scroll e navegação com detecção de seção ativa.',
     image: '/img/vitalcare.png',
     imageAlt: 'VitalCare',
     liveUrl: 'https://clinica-vitalcare.vercel.app/',
     repoUrl: 'https://github.com/matteoludovino/VitalCare',
-    stacks: ['next', 'tailwind', 'vercel'],
+    stacks: ['next', 'tailwind', 'typescript','vercel'],
   },
   {
-    id: 4,
+    id: 5,
     name: 'API de Gerenciamento de Pedidos',
     description: 'API REST para sistema de PDV (POS) de restaurante, desenvolvida com Node.js, Express, Sequelize e MySQL. Oferece gerenciamento de clientes, produtos e pedidos com arquitetura MVC escalável, integridade transacional e código limpo e modular.',
     image: '/img/api-pedidos.png',
@@ -58,15 +69,5 @@ export const projects = [
     liveUrl: 'https://github.com/matteoludovino/api-gerenciamento-pedidos',
     repoUrl: 'https://github.com/matteoludovino/api-gerenciamento-pedidos',
     stacks: ['nodejs', 'express', 'https', 'mysql'],
-  },
-  {
-    id: 5,
-    name: 'Saúde+',
-    description: 'Plataforma responsiva de descontos para clínica ambulatorial com catálogo de serviços.',
-    image: '/img/saudemais.png',
-    imageAlt: 'Saúde+',
-    liveUrl: 'https://saude-mais.vercel.app/',
-    repoUrl: 'https://github.com/matteoludovino/SaudeMais',
-    stacks: ['html', 'css', 'js'],
   },
 ];
