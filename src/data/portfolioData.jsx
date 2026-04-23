@@ -23,6 +23,16 @@ export const TECH = {
 export const projects = [
   {
     id: 1,
+    name: 'Sora Café',
+    description: 'Landing page premium para uma cafeteria artesanal, com foco em experiência visual e microinterações refinadas. Desenvolvida com Next.js 15, TypeScript, Tailwind CSS e Framer Motion, o projeto conta com carrinho funcional persistido em localStorage, animações de scroll, parallax, cursor customizado e dark mode.',
+    image: '/img/sora-cafe.png',
+    imageAlt: 'Sora Café',
+    liveUrl: 'https://sora-cafe.vercel.app/',
+    repoUrl: 'https://github.com/matteoludovino/sora-cafe',
+    stacks: ['next', 'tailwind', 'typescript', 'vercel'],
+  },
+  {
+    id: 2,
     name: 'Taskly',
     description: 'Aplicação de gerenciamento de tarefas fullstack com Next.js 15, TypeScript, Prisma e PostgreSQL. Conta com API REST completa, validação com Zod, paginação, busca, filtros por status. Inclui suporte offline com sincronização automática, Dockerfile e deploy configurado para Vercel e Neon.',
     image: '/img/taskly.png',
@@ -32,7 +42,7 @@ export const projects = [
     stacks: ['next', 'typescript', 'postgresql', 'prisma', 'vercel'],
   },
   {
-    id: 2,
+    id: 3,
     name: 'Saúde+',
     description: 'Landing page para o Saúde+, programa de benefícios que oferece descontos em consultas, exames e medicamentos. Possui animações de scroll, header dinâmico, FAQ com filtro por categorias e formulário de captação de leads, totalmente responsiva para mobile, tablet e desktop.',
     image: '/img/saudemais.png',
@@ -42,7 +52,7 @@ export const projects = [
     stacks: ['next', 'tailwind', 'typescript', 'vercel'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'API de Gerenciamento de Reservas',
     description: 'API RESTful para reservas de hotéis e restaurantes desenvolvida com Node.js, Express e MongoDB. Suporta autenticação, estabelecimentos, quartos/mesas e reservas com verificação de disponibilidade, prevenção de conflitos e arquitetura modular escalável.',
     image: '/img/api-reservas.png',
@@ -52,7 +62,7 @@ export const projects = [
     stacks: ['nodejs','express', 'https', 'mongodb'],
   },
   {
-    id: 4,
+    id: 5,
     name: 'Seu Burguer',
     description: 'Landing page para a hamburgueria Seu Burguer. O site apresenta o cardápio completo com filtro por categoria, carrinho de compras com controle de quantidade e finalização de pedido direto pelo WhatsApp. Possui indicador de horário de funcionamento em tempo real, animações suaves e design escuro moderno com foco em mobile.',
     image: '/img/seu-burguer.png',
@@ -62,7 +72,7 @@ export const projects = [
     stacks: ['next', 'tailwind', 'typescript', 'vercel'],
   },
   {
-    id: 5,
+    id: 6,
     name: 'VitalCare',
     description: 'Landing page para a clínica médica VitalCare, com seções de apresentação, grade de 17 especialidades, depoimentos de pacientes e banner de conversão com CTA duplo. Desenvolvida com Next.js 14, TypeScript e Tailwind CSS, com layout responsivo, animações de scroll e navegação com detecção de seção ativa.',
     image: '/img/vitalcare.png',
@@ -72,7 +82,7 @@ export const projects = [
     stacks: ['next', 'tailwind', 'typescript','vercel'],
   },
   {
-    id: 6,
+    id: 7,
     name: 'API de Gerenciamento de Pedidos',
     description: 'API REST para sistema de PDV (POS) de restaurante, desenvolvida com Node.js, Express, Sequelize e MySQL. Oferece gerenciamento de clientes, produtos e pedidos com arquitetura MVC escalável, integridade transacional e código limpo e modular.',
     image: '/img/api-pedidos.png',
