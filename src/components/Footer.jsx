@@ -15,7 +15,7 @@ export default function Footer() {
         <h3>Projetos</h3>
         <a href="https://seu-burguer.vercel.app/" target="_blank" rel="noreferrer">Seu Burguer</a>
         <a href="https://clinica-vitalcare.vercel.app/" target="_blank" rel="noreferrer">VitalCare</a>
-        <a href="https://barber-of-war.vercel.app/" target="_blank" rel="noreferrer">Barber of War</a>
+        <a href="https://sora-cafe.vercel.app/" target="_blank" rel="noreferrer">Sora Café</a>
         <a href="https://saude-mais.vercel.app/" target="_blank" rel="noreferrer">SaúdeMais</a>
       </div>
 
