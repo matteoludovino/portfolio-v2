@@ -10,6 +10,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 19px;
+  /* Anchor links land below the fixed header instead of under it. */
+  scroll-padding-top: var(--header-h);
 }
 
 body {
@@ -22,6 +24,11 @@ body {
 :root {
   --svg-light: #000;
   --svg-dark: #fff;
+  /* Fluid vertical rhythm: shrinks on short screens (e.g. 14" laptops at 125%),
+     keeps the original breathing room on tall ones. */
+  --header-h: 5rem;
+  --section-space: clamp(3.5rem, 11vh, 8rem);
+  --title-space: clamp(1.75rem, 5vh, 3.5rem);
 }
 
 .light-theme {
@@ -218,17 +225,18 @@ header {
 }
 
 #person {
-  height: 67vh;
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh; /* excludes mobile browser bars */
   width: 100%;
+  padding: var(--header-h) 16px 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: transparent;
-  margin-bottom: 190px;
 }
 
 .person-content {
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -244,8 +252,8 @@ header {
   padding: 0px 4px;
   position: relative;
   width: fit-content;
-  font-size: 4.5rem;
-  line-height: 4.3rem;
+  font-size: clamp(1.9rem, min(8.5vw, 11vh), 4.5rem);
+  line-height: 1;
   border-right: 5px solid transparent;
 }
 
@@ -370,20 +378,22 @@ header {
   animation: scrollDownAnimation 1s infinite alternate;
 }
 
+#projects {
+  padding-top: var(--section-space);
+}
+
 .projects-title {
-  margin-bottom: 40px;
-  margin-top: 25rem;
+  margin-bottom: var(--title-space);
 }
 
 .projects-title h1 {
   font-size: 2.25rem;
   color: #fff;
-  margin-bottom: 8rem;
 }
 
 #skills {
   background: #000;
-  padding: 200px 80px 20px;
+  padding: var(--section-space) 80px 0;
   color: #fff;
 }
 
@@ -395,7 +405,7 @@ header {
 
 .skills-title h1 {
   font-size: 2.25rem;
-  margin-bottom: 100px;
+  margin-bottom: var(--title-space);
 }
 
 .skills-grid {
@@ -433,7 +443,6 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 0.5rem;
-  margin-bottom: 400px;
 }
 
 .skills-toggle__btn {
@@ -462,7 +471,7 @@ header {
   padding: 20px;
   border-radius: 20px;
   width: 100%;
-  height: 200px;
+  min-height: clamp(120px, 20vh, 180px);
   text-align: center;
   transition: border-color 0.2s ease;
   display: flex;
@@ -497,8 +506,8 @@ header {
 }
 
 #about {
-  height: 100vh;
   width: 100%;
+  padding: var(--section-space) 0 0;
   background: #000;
   display: flex;
   justify-content: center;
@@ -509,11 +518,9 @@ header {
 
 .about-content {
   max-width: 800px;
-  margin-bottom: 500px;
 }
 
 .about-content h2 {
-  margin-top: 500px;
   font-size: 2.25rem;
   margin-bottom: 20px;
   color: #fff;
@@ -530,7 +537,7 @@ header {
 }
 
 #contact {
-  margin-top: 500px;
+  padding: var(--section-space) 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -562,7 +569,6 @@ footer .contact svg {
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  margin-bottom: 200px;
 }
 
 .contact-button {
@@ -592,7 +598,7 @@ footer .contact svg {
 footer {
   background: #070707;
   color: #fff;
-  padding: 40px 18rem;
+  padding: 40px clamp(20px, 12vw, 18rem);
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -792,18 +798,13 @@ footer .contact a i {
     top: 34px;
   }
 
-  .person-content div h1 {
-    font-size: 2.7rem;
-    line-height: 3rem;
-  }
-
   .person-description p {
     font-size: 0.9rem;
     width: 80%;
   }
 
   #skills {
-    padding: 100px 20px 20px;
+    padding: var(--section-space) 20px 0;
   }
 
   .skills-grid {
@@ -813,10 +814,6 @@ footer .contact a i {
   .skill-card {
     height: auto;
     padding: 24px 16px;
-  }
-
-  .skills-toggle {
-    margin-bottom: 120px;
   }
 
   .about-content {
@@ -840,10 +837,15 @@ footer .contact a i {
   .contact-button {
     width: 90%;
   }
+
+  .button-container {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
 }
 
 .gh-dashboard-section {
-  padding: 0 80px 200px;
+  padding: var(--section-space) 80px 0;
   display: flex;
   justify-content: center;
 }
@@ -855,7 +857,7 @@ footer .contact a i {
 
 .gh-dashboard-title {
   font-size: 2.25rem;
-  margin-bottom: 3rem;
+  margin-bottom: var(--title-space);
   color: #fff;
   text-align: center;
 }
@@ -1082,7 +1084,7 @@ footer .contact a i {
 
 @media only screen and (max-width: 785px) {
   .gh-dashboard-section {
-    padding: 0 20px 120px;
+    padding: var(--section-space) 20px 0;
   }
 
   .gh-dashboard-grid {
@@ -1261,7 +1263,7 @@ footer .contact a i {
 .pc-see-more {
   display: flex;
   justify-content: center;
-  margin: 1rem 0 6rem;
+  margin: 1rem 0 0;
 }
 
 .pc-see-more__btn {
@@ -1351,9 +1353,6 @@ footer .contact a i {
     font-size: 1.8rem;
   }
 
-  .pc-see-more {
-    margin-bottom: 3rem;
-  }
 }
 
 .pc-card__image-btn {
