@@ -1,4 +1,8 @@
 import { WhatsAppIcon, LinkedInIcon, GmailIcon } from '../data/svgIcons';
+import { projects } from '../data/portfolioData';
+
+// Same order as the projects section: newest first. Adding a project updates the footer.
+const FOOTER_PROJECTS = projects.slice(0, 4);
 
 export default function Footer() {
   return (
@@ -13,10 +17,9 @@ export default function Footer() {
 
       <div className="projects">
         <h3>Projetos</h3>
-        <a href="https://seu-burguer.vercel.app/" target="_blank" rel="noreferrer">Seu Burguer</a>
-        <a href="https://clinica-vitalcare.vercel.app/" target="_blank" rel="noreferrer">VitalCare</a>
-        <a href="https://sora-cafe.vercel.app/" target="_blank" rel="noreferrer">Sora Café</a>
-        <a href="https://saude-mais.vercel.app/" target="_blank" rel="noreferrer">SaúdeMais</a>
+        {FOOTER_PROJECTS.map(({ id, name, liveUrl }) => (
+          <a key={id} href={liveUrl} target="_blank" rel="noreferrer">{name}</a>
+        ))}
       </div>
 
       <div className="contact">
@@ -27,8 +30,8 @@ export default function Footer() {
         <a href="https://www.linkedin.com/in/matteoludovino/" target="_blank" rel="noreferrer">
           <LinkedInIcon /> LinkedIn
         </a>
-        <a href="mailto:matteoludovino@gmail.com" target="_blank" rel="noreferrer">
-          <GmailIcon /> matteoludovino@gmail.com
+        <a href="mailto:matteoludovino@gmail.com" title="matteoludovino@gmail.com">
+          <GmailIcon /> E-mail
         </a>
       </div>
     </footer>

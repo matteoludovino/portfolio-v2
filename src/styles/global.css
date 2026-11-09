@@ -547,6 +547,7 @@ header {
 
 footer .contact svg {
   height: 22px;
+  flex-shrink: 0; /* never let a long label squeeze the icon to 0 width */
 }
 
 .contact-text {
