@@ -1,4 +1,4 @@
-import { JSIcon, HTMLIcon, CSSIcon, PHPIcon, NodeIcon, ExpressIcon, HTTPSIcon, ReactIcon, NextIcon, VercelIcon, MySQLIcon, PostgreSQLIcon, MongoDBIcon, TailwindIcon, TSIcon, PrismaIcon, FastifyIcon } from './svgIcons';
+import { JSIcon, HTMLIcon, CSSIcon, PHPIcon, NodeIcon, ExpressIcon, HTTPSIcon, ReactIcon, NextIcon, VercelIcon, MySQLIcon, PostgreSQLIcon, MongoDBIcon, TailwindIcon, TSIcon, PrismaIcon, FastifyIcon, PythonIcon, FastAPIIcon, RedisIcon, DockerIcon } from './svgIcons';
 
 export const TECH = {
   html:       { label: 'HTML',       Icon: HTMLIcon         },
@@ -19,11 +19,25 @@ export const TECH = {
   typescript: { label: 'TypeScript', Icon: TSIcon           },
   prisma:     { label: 'Prisma',     Icon: PrismaIcon       },
   fastify:    { label: 'Fastify',    Icon: FastifyIcon      },
+  python:     { label: 'Python',     Icon: PythonIcon       },
+  fastapi:    { label: 'FastAPI',    Icon: FastAPIIcon      },
+  redis:      { label: 'Redis',      Icon: RedisIcon        },
+  docker:     { label: 'Docker',     Icon: DockerIcon       },
 };
 
 export const projects = [
   {
     id: 1,
+    name: 'Raio-X Brasil API',
+    description: 'API agregadora de dados públicos brasileiros (CEP e CNPJ) desenvolvida com Python e FastAPI. Consulta seis fontes externas, em paralelo com merge campo a campo para CEP e em cadeia de fallback para CNPJ, protegendo cotas de terceiros. Conta com cache Redis com single-flight e stale-if-error, circuit breaker, rate limit por plano em Lua, autenticação por API key e validação do novo CNPJ alfanumérico. 93 testes, 95% de cobertura e demo ao vivo com Swagger.',
+    image: '/img/raiox-brasil-api.png',
+    imageAlt: 'Raio-X Brasil API',
+    liveUrl: 'https://raiox-brasil-api.onrender.com/docs',
+    repoUrl: 'https://github.com/matteoludovino/raiox-brasil-api',
+    stacks: ['python', 'fastapi', 'redis', 'docker'],
+  },
+  {
+    id: 2,
     name: 'AgendaFlow',
     description: 'SaaS de agendamento online. A plataforma permite que profissionais criem uma página pública de agendamento com link personalizado, gerenciem serviços, horários e datas bloqueadas, recebam notificações automáticas por e-mail e cobrem mensalidades via Stripe. Desenvolvido com Next.js 15, TypeScript, Prisma ORM, PostgreSQL, NextAuth v5 e Tailwind CSS, com arquitetura limpa, Server Actions e deploy otimizado na Vercel.',
     image: '/img/agendaflow.png',
@@ -33,7 +47,7 @@ export const projects = [
     stacks: ['next', 'tailwind', 'typescript', 'postgresql', 'prisma', 'vercel'],
   },
   {
-    id: 2,
+    id: 3,
     name: 'API Encurtador de URLs',
     description: 'API REST completa para encurtamento de URLs, desenvolvida com Node.js, TypeScript e Fastify seguindo arquitetura em camadas. Permite criar links curtos com alias customizado e expiração configurável, registra automaticamente dados de cada acesso como país, dispositivo e navegador. Autenticação via JWT, cache de redirecionamento em Redis, rate limiting, IPs anonimizados e documentação interativa via Swagger.',
     image: '/img/api-encurtador.png',
@@ -43,7 +57,7 @@ export const projects = [
     stacks: ['node', 'typescript', 'fastify', 'https', 'prisma', 'postgresql'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Sora Café',
     description: 'Landing page premium para uma cafeteria artesanal, com foco em experiência visual e microinterações refinadas. Desenvolvida com Next.js 15, TypeScript, Tailwind CSS e Framer Motion, o projeto conta com carrinho funcional persistido em localStorage, animações de scroll, parallax, cursor customizado e dark mode.',
     image: '/img/sora-cafe.png',
@@ -53,7 +67,7 @@ export const projects = [
     stacks: ['next', 'tailwind', 'typescript', 'vercel'],
   },
   {
-    id: 4,
+    id: 5,
     name: 'Taskly',
     description: 'Aplicação de gerenciamento de tarefas fullstack com Next.js 15, TypeScript, Prisma e PostgreSQL. Conta com API REST completa, validação com Zod, paginação, busca, filtros por status. Inclui suporte offline com sincronização automática, Dockerfile e deploy configurado para Vercel e Neon.',
     image: '/img/taskly.png',
@@ -63,7 +77,7 @@ export const projects = [
     stacks: ['next', 'typescript', 'postgresql', 'prisma', 'vercel'],
   },
   {
-    id: 5,
+    id: 6,
     name: 'Saúde+',
     description: 'Landing page para o Saúde+, programa de benefícios que oferece descontos em consultas, exames e medicamentos. Possui animações de scroll, header dinâmico, FAQ com filtro por categorias e formulário de captação de leads, totalmente responsiva para mobile, tablet e desktop.',
     image: '/img/saudemais.png',
@@ -73,7 +87,7 @@ export const projects = [
     stacks: ['next', 'tailwind', 'typescript', 'vercel'],
   },
   {
-    id: 6,
+    id: 7,
     name: 'API de Gerenciamento de Reservas',
     description: 'API RESTful para reservas de hotéis e restaurantes desenvolvida com Node.js, Express e MongoDB. Suporta autenticação, estabelecimentos, quartos/mesas e reservas com verificação de disponibilidade, prevenção de conflitos e arquitetura modular escalável.',
     image: '/img/api-reservas.png',
@@ -83,7 +97,7 @@ export const projects = [
     stacks: ['nodejs','express', 'https', 'mongodb'],
   },
   {
-    id: 7,
+    id: 8,
     name: 'Seu Burguer',
     description: 'Landing page para a hamburgueria Seu Burguer. O site apresenta o cardápio completo com filtro por categoria, carrinho de compras com controle de quantidade e finalização de pedido direto pelo WhatsApp. Possui indicador de horário de funcionamento em tempo real, animações suaves e design escuro moderno com foco em mobile.',
     image: '/img/seu-burguer.png',
@@ -93,7 +107,7 @@ export const projects = [
     stacks: ['next', 'tailwind', 'typescript', 'vercel'],
   },
   {
-    id: 8,
+    id: 9,
     name: 'VitalCare',
     description: 'Landing page para a clínica médica VitalCare, com seções de apresentação, grade de 17 especialidades, depoimentos de pacientes e banner de conversão com CTA duplo. Desenvolvida com Next.js 14, TypeScript e Tailwind CSS, com layout responsivo, animações de scroll e navegação com detecção de seção ativa.',
     image: '/img/vitalcare.png',
@@ -103,7 +117,7 @@ export const projects = [
     stacks: ['next', 'tailwind', 'typescript','vercel'],
   },
   {
-    id: 9,
+    id: 10,
     name: 'API de Gerenciamento de Pedidos',
     description: 'API REST para sistema de PDV (POS) de restaurante, desenvolvida com Node.js, Express, Sequelize e MySQL. Oferece gerenciamento de clientes, produtos e pedidos com arquitetura MVC escalável, integridade transacional e código limpo e modular.',
     image: '/img/api-pedidos.png',
