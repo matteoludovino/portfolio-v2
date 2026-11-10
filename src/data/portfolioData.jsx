@@ -1,4 +1,4 @@
-import { JSIcon, HTMLIcon, CSSIcon, PHPIcon, NodeIcon, ExpressIcon, HTTPSIcon, ReactIcon, NextIcon, VercelIcon, MySQLIcon, PostgreSQLIcon, MongoDBIcon, TailwindIcon, TSIcon, PrismaIcon, FastifyIcon, PythonIcon, FastAPIIcon, RedisIcon, DockerIcon } from './svgIcons';
+import { JSIcon, HTMLIcon, CSSIcon, PHPIcon, NodeIcon, ExpressIcon, HTTPSIcon, ReactIcon, NextIcon, VercelIcon, MySQLIcon, PostgreSQLIcon, MongoDBIcon, TailwindIcon, TSIcon, PrismaIcon, FastifyIcon, PythonIcon, FastAPIIcon, RedisIcon, DockerIcon, NestJSIcon } from './svgIcons';
 
 export const TECH = {
   html:       { label: 'HTML',       Icon: HTMLIcon         },
@@ -23,6 +23,7 @@ export const TECH = {
   fastapi:    { label: 'FastAPI',    Icon: FastAPIIcon      },
   redis:      { label: 'Redis',      Icon: RedisIcon        },
   docker:     { label: 'Docker',     Icon: DockerIcon       },
+  nestjs:     { label: 'NestJS',     Icon: NestJSIcon       },
 };
 
 // Add new projects at the END with the next id. The list below is sorted by id (newest
@@ -128,6 +129,16 @@ const PROJECT_LIST = [
     liveUrl: 'https://raiox-brasil-api.onrender.com/docs',
     repoUrl: 'https://github.com/matteoludovino/raiox-brasil-api',
     stacks: ['python', 'fastapi', 'redis', 'docker'],
+  },
+  {
+    id: 11,
+    name: 'Sessio',
+    description: 'Sistema de agendamento para clínicas de psicologia com NestJS, PostgreSQL e React. Equipe com papéis, agenda semanal por psicólogo e sala, sessões recorrentes e lembrete automático com link para o paciente confirmar ou cancelar sem login. Conflitos de horário são barrados pelo próprio banco, inclusive em reservas simultâneas. Prontuário visível só para o psicólogo autor, cifrado com AES-256-GCM e auditado. 144 testes, e2e com Postgres real e demo ao vivo com login de um clique.',
+    image: '/img/sessio.png',
+    imageAlt: 'Sessio',
+    liveUrl: 'https://sessio-project.vercel.app/',
+    repoUrl: 'https://github.com/matteoludovino/sessio',
+    stacks: ['nestjs', 'typescript', 'react', 'postgresql', 'tailwind', 'docker'],
   },
 ];
 
