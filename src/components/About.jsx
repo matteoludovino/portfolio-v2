@@ -1,4 +1,5 @@
 import { DownloadIcon } from '../data/svgIcons';
+import { ageOn } from '../data/age';
 
 export default function About() {
   return (
@@ -6,7 +7,7 @@ export default function About() {
       <div className="about-content">
         <h2>Sobre mim</h2>
         <p>
-          Opa! Me chamo Matteo, tenho 20 anos e desde criança eu sempre tive interesse
+          Opa! Me chamo Matteo, tenho {ageOn()} anos e desde criança eu sempre tive interesse
           em programação, sempre tive esse apreço por tecnologia e computadores. Comecei fazendo bots no
           aplicativo Discord utilizando Node.js.
         </p>

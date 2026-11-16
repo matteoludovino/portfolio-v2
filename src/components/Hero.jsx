@@ -1,4 +1,5 @@
 import { LinkedInIcon, GitHubIcon } from '../data/svgIcons';
+import { ageOn } from '../data/age';
 
 export default function Hero() {
   return (
@@ -10,7 +11,7 @@ export default function Hero() {
         </div>
 
         <div className="person-description">
-          <p>Tenho 20 anos e sou desenvolvedor Full Stack, saiba mais sobre mim:</p>
+          <p>Tenho {ageOn()} anos e sou desenvolvedor Full Stack, saiba mais sobre mim:</p>
         </div>
 
         <div className="button-container">
