@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { JSIcon, HTMLIcon, CSSIcon, TailwindIcon, TSIcon, NodeIcon, ReactIcon, NextIcon, PostgreSQLIcon, MongoDBIcon, MySQLIcon, ExpressIcon, FastifyIcon, PrismaIcon } from '../data/svgIcons';
+import { JSIcon, HTMLIcon, CSSIcon, TailwindIcon, TSIcon, NodeIcon, ReactIcon, NextIcon, PostgreSQLIcon, MongoDBIcon, MySQLIcon, ExpressIcon, FastifyIcon, PrismaIcon, PythonIcon, DjangoIcon, FastAPIIcon, NestJSIcon, RedisIcon, DockerIcon } from '../data/svgIcons';
 
 const DEFAULT_SKILLS = [
   { id: 1,  name: 'JavaScript',  Icon: JSIcon         },
@@ -19,6 +19,12 @@ const EXTRA_SKILLS = [
   { id: 12, name: 'Express.js',  Icon: ExpressIcon     },
   { id: 13, name: 'Fastify',     Icon: FastifyIcon     },
   { id: 14, name: 'Prisma',      Icon: PrismaIcon      },
+  { id: 15, name: 'Python',      Icon: PythonIcon      },
+  { id: 16, name: 'Django',      Icon: DjangoIcon      },
+  { id: 17, name: 'FastAPI',     Icon: FastAPIIcon     },
+  { id: 18, name: 'NestJS',      Icon: NestJSIcon      },
+  { id: 19, name: 'Redis',       Icon: RedisIcon       },
+  { id: 20, name: 'Docker',      Icon: DockerIcon      },
 ];
 
 export default function Skills() {
