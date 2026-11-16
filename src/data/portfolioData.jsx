@@ -1,4 +1,4 @@
-import { JSIcon, HTMLIcon, CSSIcon, PHPIcon, NodeIcon, ExpressIcon, HTTPSIcon, ReactIcon, NextIcon, VercelIcon, MySQLIcon, PostgreSQLIcon, MongoDBIcon, TailwindIcon, TSIcon, PrismaIcon, FastifyIcon, PythonIcon, FastAPIIcon, RedisIcon, DockerIcon, NestJSIcon } from './svgIcons';
+import { JSIcon, HTMLIcon, CSSIcon, PHPIcon, NodeIcon, ExpressIcon, HTTPSIcon, ReactIcon, NextIcon, VercelIcon, MySQLIcon, PostgreSQLIcon, MongoDBIcon, TailwindIcon, TSIcon, PrismaIcon, FastifyIcon, PythonIcon, FastAPIIcon, RedisIcon, DockerIcon, NestJSIcon, DjangoIcon } from './svgIcons';
 
 export const TECH = {
   html:       { label: 'HTML',       Icon: HTMLIcon         },
@@ -24,6 +24,7 @@ export const TECH = {
   redis:      { label: 'Redis',      Icon: RedisIcon        },
   docker:     { label: 'Docker',     Icon: DockerIcon       },
   nestjs:     { label: 'NestJS',     Icon: NestJSIcon       },
+  django:     { label: 'Django',     Icon: DjangoIcon       },
 };
 
 // Add new projects at the END with the next id. The list below is sorted by id (newest
@@ -139,6 +140,16 @@ const PROJECT_LIST = [
     liveUrl: 'https://sessio-project.vercel.app/',
     repoUrl: 'https://github.com/matteoludovino/sessio',
     stacks: ['nestjs', 'typescript', 'react', 'postgresql', 'tailwind', 'docker'],
+  },
+  {
+    id: 12,
+    name: 'Arara',
+    description: 'Mini-ERP para lojas de roupa e calçados com Django, PostgreSQL e React. Produtos em grade tamanho × cor, várias lojas e depósito, compras, transferências e inventário cego que não apaga as vendas feitas durante a contagem. Frente de caixa com leitor de código de barras, pagamento dividido, parcelas, troco, aprovação do gerente e vale-troca. Estoque como livro-razão imutável, com custo médio e relatórios de margem. 326 testes com Postgres real, incluindo corridas entre caixas, e demo ao vivo com login de um clique.',
+    image: '/img/arara.png',
+    imageAlt: 'Arara',
+    liveUrl: 'https://arara-shelf.vercel.app/',
+    repoUrl: 'https://github.com/matteoludovino/arara',
+    stacks: ['python', 'django', 'react', 'typescript', 'postgresql', 'docker'],
   },
 ];
 
