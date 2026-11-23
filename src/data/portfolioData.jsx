@@ -84,12 +84,12 @@ const PROJECT_LIST = [
   {
     id: 6,
     name: 'Taskly',
-    description: 'Aplicação de gerenciamento de tarefas fullstack com Next.js 15, TypeScript, Prisma e PostgreSQL. Conta com API REST completa, validação com Zod, paginação, busca, filtros por status. Inclui suporte offline com sincronização automática, Dockerfile e deploy configurado para Vercel e Neon.',
+    description: 'Quadros Kanban colaborativos em tempo real: várias pessoas no mesmo quadro, com cada mudança chegando a todos na mesma ordem via WebSocket. Mostra quem está editando ou arrastando cada cartão, e a descrição é escrita a várias mãos, letra por letra, com o cursor de cada um (Yjs). Funciona offline: as alterações ficam no navegador e se juntam quando a conexão volta, e se duas pessoas mudam o mesmo campo, uma bandeja de conflitos deixa escolher qual fica. Monorepo com Next.js 16, Fastify e Prisma, log de eventos sem lacunas, testes de propriedade e de ponta a ponta com Playwright, e demo com uma colega simulada que mexe no quadro enquanto você olha.',
     image: '/img/taskly.png',
     imageAlt: 'Taskly',
     liveUrl: 'https://taskly-apenas.vercel.app/',
     repoUrl: 'https://github.com/matteoludovino/taskly',
-    stacks: ['next', 'typescript', 'postgresql', 'prisma', 'vercel'],
+    stacks: ['next', 'typescript', 'fastify', 'postgresql', 'prisma', 'docker'],
   },
   {
     id: 7,
