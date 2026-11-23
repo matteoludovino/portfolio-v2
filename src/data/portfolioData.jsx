@@ -84,7 +84,7 @@ const PROJECT_LIST = [
   {
     id: 6,
     name: 'Taskly',
-    description: 'Quadros Kanban colaborativos em tempo real: várias pessoas no mesmo quadro, com cada mudança chegando a todos na mesma ordem via WebSocket. Mostra quem está editando ou arrastando cada cartão, e a descrição é escrita a várias mãos, letra por letra, com o cursor de cada um (Yjs). Funciona offline: as alterações ficam no navegador e se juntam quando a conexão volta, e se duas pessoas mudam o mesmo campo, uma bandeja de conflitos deixa escolher qual fica. Monorepo com Next.js 16, Fastify e Prisma, log de eventos sem lacunas, testes de propriedade e de ponta a ponta com Playwright, e demo com uma colega simulada que mexe no quadro enquanto você olha.',
+    description: 'Quadros Kanban colaborativos em tempo real com Next.js, Fastify e WebSocket: cada mudança aparece na hora para todos, a descrição dos cartões é escrita a várias mãos com o cursor de cada um (Yjs) e dá para trabalhar offline, com conflitos resolvidos numa bandeja. Demo com uma colega simulada.',
     image: '/img/taskly.png',
     imageAlt: 'Taskly',
     liveUrl: 'https://taskly-apenas.vercel.app/',
